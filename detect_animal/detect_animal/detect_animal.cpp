@@ -10,7 +10,8 @@ int main(int argc, char** argv) {
         return 0;
     }
 
-    cv::Mat frame;
+    Mat frame;
+
     while (true) {
         video_capture >> frame;
 
@@ -19,7 +20,20 @@ int main(int argc, char** argv) {
         if (cv::waitKey(10) == esc_key) {
             break;
         }
+
+        // Boucle pour prendre une i photos de la videocapture
+        for (int i = 0; i < 20; i++) {
+            string name = "Capture_from_video" + to_string(i) + ".png";
+            imwrite("../../img/" + name, frame);
+            cout << "A screen ! \n";
+        }
+
+        if (waitKey(1) >= 0) break;
     }
+
+
+
+
 
     cv::destroyAllWindows();
     video_capture.release();
