@@ -149,9 +149,11 @@
   <ItemGroup>
     <ClCompile Include="detect_animal.cpp" />
     <ClCompile Include="FaceDetector.cpp" />
+    <ClCompile Include="FaceRecognition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FaceDetector.hpp" />
+    <ClInclude Include="FaceRecognition.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
