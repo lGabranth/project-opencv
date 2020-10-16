@@ -10,11 +10,11 @@ int main(int argc, const char** argv)
 {
     VideoCapture capture;
     
-    int camera_device = cascadeClassifier(argc, argv, face_cascade, nose_cascade, mouth_cascade);
+    // récupération du return de la fonction displayCamera
+    int camera_device = displayCamera(argc, argv, face_cascade, nose_cascade, mouth_cascade);
     if (camera_device != -1)
     {
-        // On lit le stream vidéo
-        capture.open(camera_device);
+        capture.open(camera_device); // On lit le stream vidéo
     }
 
     if (!capture.isOpened())
@@ -25,14 +25,14 @@ int main(int argc, const char** argv)
 
     Mat frame;
 
-    while (capture.read(frame))
+    while (capture.read(frame)) //Pendant que on lit la video de la caméra
     {
         if (frame.empty())
         {
             cout << "/!\\Pas d'image capturee\n";
             break;
         }
-        // Traitement de la vidéo
+        // Traitement de la vidéo suivant la fonction detectAndDisplay
         detectAndDisplay(frame, face_cascade, nose_cascade, mouth_cascade);
         // Si on appuie sur le bouton "esc" pendant la vidéo, on quitte cette dernière.
         if (waitKey(10) == 27)
