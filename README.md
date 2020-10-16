@@ -1,19 +1,20 @@
-project_opencv_detection_visage
-===============================
+project_opencv : Détection de port du masque
+============================================
 
 * L'objectif, à terme, sera d'ouvrir la caméra. 
 * Si le programme détecte que l'utilisateur porte un masque, on affiche un rond vert autour de sa tête avec le texte "Masque !".
 * Si le programme détecte que l'utilisateur ne porte pas de masque, on affiche un rond rouge autour de sa tête avec le texte "Pas de masque !".
 
 *TODO LIST*
-| 			 Tâche			 | Statut |
-|--------------------|--------|
-|  Ouvrir la caméra  | 	 ✔		|
-|  Détecter le nez   | 	 ✔ 	|
-| Détecter la bouche |   ✔ 	|
-|  Afficher le rond  |   ✔ 	|
-|  Afficher le text  |   ✔ 	|
-|  Modifier couleur  |   ✔ 	|
+| 			  Tâche	 			  | Statut |
+|   :----------------:  |:------:|
+|    Ouvrir la caméra   |   ✔	 |
+|    Détecter le nez    | 	✔ 	 |
+|   Détecter la bouche  |   ✔ 	 |
+|    Afficher le rond   |   ✔ 	 |
+|    Afficher le text   |   ✔ 	 |
+|    Modifier couleur   |   ✔ 	 |
+|  Séparation fichiers  |   ✔ 	 |
 
 Avancement du projet :
 - Quand un visage entre dans le champ de la caméra, visage est détecté. Un carré autour du visage. ✔
